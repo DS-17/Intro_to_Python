@@ -18,3 +18,17 @@ Hint: You may need to search online for the following:
     if __name__ == "__main__"
 
 Prepare to defend you choice of import style. """
+
+
+# Answer
+import random
+
+__all__ = ("dice",)
+
+
+def dice(rolls: int, sides: int) -> int:
+    return sum(random.randint(1, sides) for _ in range(rolls))
+
+
+if __name__ == "__main__":
+    print(f"Jim's fireball deals: {dice(8, 6)} fire damage to the Troll.")

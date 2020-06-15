@@ -8,3 +8,15 @@ If the length is exactly 5 print "Five".
 
 Try to use 'if', 'else' and 'elif' exactly once each.
 Also, try not to evaluate the length of the name more than once. """
+
+
+# Answer
+name = input("What is your name? ")
+size = len(name)
+
+if size < 5:
+    print("Under")
+elif size == 5:
+    print("Five")
+else:
+    print("Over")

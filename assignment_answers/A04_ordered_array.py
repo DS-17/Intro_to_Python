@@ -19,3 +19,21 @@ from random import shuffle  # Required only for stretch goal
 
 
 jumbled_nums = (8, 4, 2, 9, 7, 3, 6, 4)
+
+# Answer
+list_nums = list(jumbled_nums)
+list_nums.append(5)
+list_nums.remove(4)
+list_nums.sort()
+list_nums.insert(0, 1)
+tuple_nums = tuple(list_nums)
+print(tuple_nums)
+
+# Stretch Goals
+a, b, c, d, e, f, g, h, i = tuple_nums
+new_list = [a, b, c, d, e, f, g, h, i]
+# This is not a great idea since we can just do this:
+# new_list = list(tuple_nums)
+shuffle(new_list)
+final_tuple = tuple(new_list)
+print(final_tuple)

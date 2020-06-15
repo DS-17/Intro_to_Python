@@ -14,25 +14,3 @@ number by any number. The step input should have a default value of 1.
 4. What logical problems might occur if no error handling
 is implemented? What happens when you feed it strange input?
 5. Before you turn in the assignment - comment out any error examples. """
-
-
-# Answer
-my_gen = (i for i in range(0, 101, 5))
-print('My Gen 1:', *my_gen)
-print('My Gen 2:', *my_gen)  # Nothing is printed.
-
-
-# Stretch Goals:
-my_reusable_gen = lambda: (i for i in range(0, 101, 5))
-print('Reusable 1:', *my_reusable_gen())
-print('Reusable 2:', *my_reusable_gen())
-
-my_param_gen = lambda begin, end, step=1: (i for i in range(begin, end, step))
-print('Param Gen:', *my_param_gen(0, 11, 2))
-# Possible logic errors:
-# 1. The end number could be smaller than the begin number.
-# print('Strange Input 1:', *my_param_gen(10, 0))  # Nothing is printed.
-# 2. Strings do not work. Type error.
-# print('Strange Input 2:', *my_param_gen('1', '10', '2'))  # Nothing is printed.
-# 3. Floats do not work. Type error.
-# print('Strange Input 3:', *my_param_gen(1.1, 2.1, 0.1))  # Nothing is printed.

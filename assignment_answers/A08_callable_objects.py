@@ -8,3 +8,16 @@ each result on a new line.
 
 The signature of the first function should be: `is_even(num: int) -> bool`
 The signature of the second function should be: `test_is_even() -> None` """
+
+
+# Answer
+def is_even(num: int) -> bool:
+    return num % 2 == 0
+
+
+def test_is_even() -> None:
+    for i in range(7):
+        print(is_even(i))
+
+
+test_is_even()
